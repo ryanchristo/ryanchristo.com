@@ -1,6 +1,8 @@
 pub mod about;
 pub mod blog;
 pub mod home;
+pub mod film;
+pub mod tech;
 
 use yew_router::prelude::*;
 
@@ -12,6 +14,10 @@ pub enum AppRoute {
     BlogPage(String),
     #[to="/blog"]
     Blog,
+    #[to="/film"]
+    Film,
+    #[to="/tech"]
+    Tech,
     #[to="/"]
     Home
 }

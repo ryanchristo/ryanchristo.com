@@ -22,14 +22,15 @@
 body {
   cursor: default;
   font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
-p {
+p, li {
+  font-weight: 300;
   line-height: 1.75;
 }
 
@@ -76,20 +77,18 @@ button {
 .theme .header,
 .theme .footer {
   background: #FFF;
-  outline: 1px solid #EEE;
+  box-shadow: 0 0 2px #CCC;
 }
 
-.theme .sidebar {
-  color: #333;
-  outline: 1px solid #EEE;
-}
-
-.theme .sidebar h2 {
-  color: #333;
-}
-
+.theme .sidebar,
 .theme .sidebar-mobile {
-  outline: 1px solid #EEE;
+  background: #FFF;
+  box-shadow: 0 0 2px #CCC;
+}
+
+.theme .sidebar h2,
+.theme .sidebar-mobile h2 {
+  color: #666;
 }
 
 .theme .banner {
@@ -108,6 +107,11 @@ button {
   color: #666;
 }
 
+.theme .content-item img {
+  filter: grayscale(50%);
+  box-shadow: 0 0 2px #CCC;
+}
+
 /* header, footer */
 
 .header,
@@ -117,7 +121,17 @@ button {
   font-size: 1.1rem;
   height: 60px; /* fixed height */
   justify-content: center;
+  position: fixed;
   width: 100vw;
+  z-index: 10;
+}
+
+.header {
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
 }
 
 .header li,
@@ -127,12 +141,7 @@ button {
 
 .header a,
 .footer a {
-  padding: 0.75rem;
-}
-
-.header b,
-.footer b {
-  font-weight: 300;
+  font-weight: 400;
   padding: 0.75rem;
 }
 
@@ -143,72 +152,67 @@ button {
     font-size: 1rem;
   }
 
-  .header li,
-  .footer li {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (max-width: 500px) {
-
-  .header-desktop {
-    display: none;
+  .header a,
+  .footer a {
+    padding: 0.5rem;
   }
 }
 
 /* sidebar */
 
 .sidebar {
-  font-size: 0.9rem;
-  height: calc(100vh - 4rem); /* height - padding */
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding: 6rem 4rem;
+  height: calc(100vh - 120px - 8rem); /* height - (header + footer) - padding */
+  /* overflow-y: scroll; */
+  padding: 4rem;
   position: fixed;
-  top: 0;
   width: 200px; /* fixed width */
   z-index: 5;
 }
 
-.sidebar h2 {
-  font-size: 1rem;
-  padding: 1rem 0;
+.sidebar-mobile {
+  height: 0;
 }
 
-.sidebar li {
+.sidebar,
+.sidebar-mobile {
+  font-size: 0.9rem;
+}
+
+.sidebar h2,
+.sidebar-mobile h2 {
+  font-size: 1rem;
   padding: 0.5rem 0;
 }
 
-.sidebar-mobile {
-  display: none;
+.sidebar li,
+.sidebar-mobile li {
+  padding: 0.5rem 0;
 }
 
-.sidebar-mobile button {
-  margin: 0 auto;
-  padding: 1rem 0;
-  width: 100vw;
+.sidebar-mobile-menu {
+  display: none;
 }
 
 @media (max-width: 1000px) {
 
   .sidebar {
-    height: auto;
-    padding: 0;
-    position: relative;
-    width: 100vw;
-  }
-
-  .sidebar-desktop {
     display: none;
   }
 
   .sidebar-mobile {
-    background: #FFF;
-    display: block;
+    height: auto;
+    position: relative;
+    width: 100vw;
+  }
+
+  .sidebar-mobile button {
+    padding: 1rem 0;
+    width: 100vw;
   }
 
   .sidebar-mobile-menu {
-    padding: 0 2rem;
+    display: block;
+    padding: 1rem 2rem;
     padding-bottom: 2rem;
   }
 }
@@ -216,32 +220,26 @@ button {
 /* container */
 
 .container {
-  height: calc(100vh - 60px - 60px); /* height - header - footer */
-  overflow-x: hidden;
-  overflow-y: scroll;
+  height: calc(100vh - 120px); /* height - (header + footer) */
+  margin: 60px 0; /* header/footer height */
   width: 100vw;
 }
 
 /* background */
 
-.background-image,
-.background-white {
+.background {
   height: 100vh;
   position: absolute;
   top: 0;
   width: 100vw;
-  z-index: -10;
+  z-index: -5;
 }
 
-.background-image {
-  background-image: url('./img/wallpaper.jpg');
+.background {
+  background-image: url('./img/background.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.background-white {
-  background: #FFF;
 }
 
 /* banner */
@@ -251,7 +249,7 @@ button {
   display: flex;
   font-size: 1.4rem;
   justify-content: center;
-  min-height: calc(100vh - 60px - 60px); /* height - header - footer */
+  min-height: calc(100vh - 120px); /* height - (header + footer) */
   width: 100vw;
 }
 
@@ -262,26 +260,17 @@ button {
 }
 
 .banner h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   padding: 0.25rem 0;
+}
+
+.banner i,
+.banner p {
+  font-weight: 400;
 }
 
 .banner p {
   padding: 0.25rem 0;
-}
-
-.banner ul {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0.5rem 0;
-}
-
-.banner a {
-  display: block;
-  font-size: 1.2rem;
-  padding: 0.5rem 0.75rem;
 }
 
 @media (max-width: 1000px) {
@@ -293,129 +282,65 @@ button {
   .banner h1 {
     font-size: 2rem;
   }
-
-  .banner a {
-    font-size: 1.1rem;
-  }
 }
 
 /* content */
 
 .content {
-  align-items: center;
-  background: #FFF;
-  display: flex;
   font-size: 1.1rem;
-  justify-content: center;
+  margin-bottom: 60px; /* footer height */
   padding: 4rem 0;
-  text-align: center;
-  width: 100vw;
 }
 
 .content-item {
-  display: block;
+  margin: 0 auto;
   max-width: 650px;
-  padding: 2rem 0;
-  width: 100%;
+}
+
+.content-item h1,
+.content-item h2,
+.content-item h3,
+.content-item h4 {
+  padding: 1rem 0;
 }
 
 .content-item h2 {
-  font-size: 2.6rem;
-}
-
-.content-item h3 {
-  font-size: 1.6rem;
-  margin-top: 4rem;
-  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 .content-item p,
-.content-item ul {
-  padding: 1rem 0;
-}
-
 .content-item li {
-  padding: 1rem 0;
+  overflow-x: hidden;
+  padding: 0.75rem 0;
 }
 
 .content-item img {
-  filter: grayscale(50%);
   margin: 0 auto;
   max-height: 200px;
+}
+
+@media (max-width: 1500px) {
+
+  .content {
+    padding-left: calc(200px + 8rem); /* sidebar width + padding */
+  }
 }
 
 @media (max-width: 1000px) {
 
   .content {
     font-size: 1rem;
+    padding: 0;
   }
 
   .content-item {
-    padding: 4rem;
-  }
-}
-
-/* document */
-
-.document {
-  margin: 0;
-  min-height: calc(100vh - 60px - 60px); /* height - header - footer */
-}
-
-.document-item {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 4rem;
-}
-
-.document-item h1,
-.document-item h2,
-.document-item h3 {
-  padding: 1rem 0;
-}
-
-.document-item p {
-  padding: 0.5rem 0;
-  text-align: justify;
-}
-
-.document-item p,
-.document-item li {
-  font-size: 1.05rem;
-  line-height: 2;
-}
-
-@media (max-width: 1500px) {
-
-  .document {
-    margin: 0;
-    margin-left: calc(200px + 4rem + 4rem); /* sidebar width + sidebar padding + padding */
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .document {
-    margin: 0;
-  }
-  
-  .document-item {
     padding: 2rem;
   }
+}
 
-  .document-item h1 {
-    font-size: 1.6rem;
-  }
+@media (max-width: 500px) {
 
-  .document-item h2 {
-    font-size: 1.4rem;
-  }
-
-  .document-item h3 {
-    font-size: 1.1rem;
-  }
-
-  .document-item p {
-    text-align: left;
+  .content-item img {
+    max-height: 150px;
   }
 }

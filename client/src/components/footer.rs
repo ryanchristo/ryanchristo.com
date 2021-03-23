@@ -40,15 +40,24 @@ impl Component for Footer {
                             { "github" }
                         </a>
                     </li>
-                    <li>
-                        <a
-                            href="https://www.youtube.com/channel/UC-C3V5kim-kkXlrkQ_VT8BQ"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            { "youtube" }
-                        </a>
-                    </li>
+                    // <li>
+                    //     <a
+                    //         href="https://www.youtube.com/channel/UC-C3V5kim-kkXlrkQ_VT8BQ"
+                    //         rel="noopener noreferrer"
+                    //         target="_blank"
+                    //     >
+                    //         { "youtube" }
+                    //     </a>
+                    // </li>
+                    // <li>
+                    //     <a
+                    //         href="https://www.patreon.com/ryanchristo"
+                    //         rel="noopener noreferrer"
+                    //         target="_blank"
+                    //     >
+                    //         { "patreon" }
+                    //     </a>
+                    // </li>
                 </ul>
             </footer>
         }

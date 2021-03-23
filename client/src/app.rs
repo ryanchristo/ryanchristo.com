@@ -11,6 +11,8 @@ use crate::routes::{
     about::About,
     blog::Blog,
     home::Home,
+    film::Film,
+    tech::Tech,
 };
 
 pub struct App {
@@ -56,37 +58,62 @@ impl Component for App {
                 // home
                 AppRoute::Home => html! {
                     <main class="theme">
-                        <div class="background-image" />
-                        <Header home=true />
-                        <Home />
-                        <Footer />
+                        <div class="container">
+                            <div class="background" />
+                            <Header />
+                            <Home />
+                            <Footer />
+                        </div>
                     </main>
                 },
                 // about
                 AppRoute::About => html! {
                     <main class="theme">
-                        <div class="background-white" />
-                        <Header home=false />
-                        <About />
-                        <Footer />
+                        <div class="container">
+                            <Header />
+                            <About />
+                            <Footer />
+                        </div>
+                    </main>
+                },
+                // tech
+                AppRoute::Tech => html! {
+                    <main class="theme">
+                        <div class="container">
+                            <Header />
+                            <Tech />
+                            <Footer />
+                        </div>
+                    </main>
+                },
+                // film
+                AppRoute::Film => html! {
+                    <main class="theme">
+                        <div class="container">
+                            <Header />
+                            <Film />
+                            <Footer />
+                        </div>
                     </main>
                 },
                 // blog
                 AppRoute::Blog => html! {
                     <main class="theme">
-                        <div class="background-white" />
-                        <Header home=false />
-                        <Blog slug="" />
-                        <Footer />
+                        <div class="container">
+                            <Header />
+                            <Blog slug="" />
+                            <Footer />
+                        </div>
                     </main>
                 },
                 // blog page
                 AppRoute::BlogPage(slug) => html! {
                     <main class="theme">
-                        <div class="background-white" />
-                        <Header home=false />
-                        <Blog slug=slug />
-                        <Footer />
+                        <div class="container">
+                            <Header />
+                            <Blog slug=slug />
+                            <Footer />
+                        </div>
                     </main>
                 },
             }

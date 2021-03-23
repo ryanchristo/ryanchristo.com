@@ -1,20 +1,16 @@
 use yew::prelude::*;
+// use yew_router::prelude::*;
 
-pub struct Header {
-    pub props: Props,
-}
+// use crate::routes::AppRoute;
 
-#[derive(Clone, PartialEq, Properties)]
-pub struct Props {
-    pub home: bool,
-}
+pub struct Header;
 
 impl Component for Header {
     type Message = ();
-    type Properties = Props;
+    type Properties = ();
 
-    fn create(props: Self::Properties, _: ComponentLink<Self>) -> Self {
-        Header { props }
+    fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
+        Header {}
     }
 
     fn change(&mut self, _: Self::Properties) -> ShouldRender {
@@ -40,10 +36,36 @@ impl Component for Header {
                         </a>
                     </li>
                     <li>
-                        <a href="/blog" alt="blog">
-                            { "blog" }
+                        <a href="/tech" alt="tech">
+                            { "tech" }
                         </a>
                     </li>
+                    <li>
+                        <a href="/film" alt="film">
+                            { "film" }
+                        </a>
+                    </li>
+                    // <li>
+                    //     <a href="/blog" alt="blog">
+                    //         { "blog" }
+                    //     </a>
+                    // </li>
+                    // TODO: fix scroll to top on route change
+                    // <RouterAnchor<AppRoute> route=AppRoute::Home>
+                    //     { "home" }
+                    // </RouterAnchor<AppRoute>>
+                    // <RouterAnchor<AppRoute> route=AppRoute::About>
+                    //     { "about" }
+                    // </RouterAnchor<AppRoute>>
+                    // <RouterAnchor<AppRoute> route=AppRoute::Tech>
+                    //     { "tech" }
+                    // </RouterAnchor<AppRoute>>
+                    // <RouterAnchor<AppRoute> route=AppRoute::Film>
+                    //     { "film" }
+                    // </RouterAnchor<AppRoute>>
+                    // <RouterAnchor<AppRoute> route=AppRoute::Blog>
+                    //     { "blog" }
+                    // </RouterAnchor<AppRoute>>
                 </ul>
             </nav>
         }

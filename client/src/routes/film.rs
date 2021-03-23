@@ -2,14 +2,14 @@ use yew::prelude::*;
 
 use crate::utils::markdown;
 
-pub struct About;
+pub struct Film;
 
-impl Component for About {
+impl Component for Film {
     type Message = ();
     type Properties = ();
 
     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
-        About { }
+        Film {}
     }
 
     fn change(&mut self, _: Self::Properties) -> ShouldRender {
@@ -23,8 +23,8 @@ impl Component for About {
     fn view(&self) -> Html {
 
         // markdown
-        let intro = include_str!("../../../docs/about/about-intro.md");
-        let timeline = include_str!("../../../docs/about/about-timeline.md");
+        let intro = include_str!("../../../docs/film/film-intro.md");
+        let projects = include_str!("../../../docs/film/film-projects.md");
 
         html! {
             <div class="container">
@@ -33,7 +33,7 @@ impl Component for About {
                         { markdown::render_markdown(intro) }
                     </div>
                     <div class="content-item" style="text-align:center">
-                        { markdown::render_markdown(timeline) }
+                        { markdown::render_markdown(projects) }
                     </div>
                 </div>
             </div>

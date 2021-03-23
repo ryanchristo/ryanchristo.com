@@ -58,14 +58,14 @@ impl Component for Sidebar {
 
     fn view(&self) -> Html {
         html! {
-            <nav class="sidebar">
-                <div class="sidebar-desktop">
+            <>
+                <div class="sidebar">
                     { for self.props.menu.iter().map(|section| self.view_section(section)) }
                 </div>
                 <div class="sidebar-mobile">
                     { self.view_mobile() }
                 </div>
-            </nav>
+            </>
         }
     }
 }
@@ -79,7 +79,7 @@ impl Sidebar {
                         { link.name.clone() }
                     </a>
                     // TODO: subroute change not detected by router...
-                    // <RouterAnchor<AppRoute> route=AppRoute::Wiki>
+                    // <RouterAnchor<AppRoute> route=AppRoute::Blog>
                     //     { link.name.clone() }
                     // </RouterAnchor<AppRoute>>
                 </li>
@@ -91,7 +91,7 @@ impl Sidebar {
                         { link.name.clone() }
                     </a>
                     // TODO: subroute change not detected by router...
-                    // <RouterAnchor<AppRoute> route=AppRoute::WikiArticle(link.slug.clone())>
+                    // <RouterAnchor<AppRoute> route=AppRoute::BlogPage(link.slug.clone())>
                     //     { link.name.clone() }
                     // </RouterAnchor<AppRoute>>
                 </li>
