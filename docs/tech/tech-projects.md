@@ -6,7 +6,7 @@
 
 Chora is a research project exploring the role of technology in regeneration, cooperative governance models, and the decentralized web. The current mission of the project is to explore "outside the city proper" ([see χώρα](https://en.wikipedia.org/wiki/Kh%C3%B4ra)).
 
-Rust, WASM, Shell
+JavaScript, Go, Rust
 
 [website](https://chora.io) | [source](https://github.com/choraio)
 
@@ -16,9 +16,9 @@ Rust, WASM, Shell
 
 ### Software Developer, Protocol Researcher
 
-ChainSafe is a team of developers building web3 infrastructure and tools for a variety of decentralized protocols. I worked on Gossamer, an implementation of the  Polkadot Host written in Go.
+ChainSafe is a team of developers building web3 infrastructure and tools for a variety of decentralized protocols. I primarily worked on Gossamer, an implementation of the Polkadot Host written in Go.
 
-Go, Rust, Polkadot, Substrate
+Go, Polkadot, Solidity, Ethereum
 
 [website](https://chainsafe.io) | [source](https://github.com/chainsafe)
 
