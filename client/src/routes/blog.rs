@@ -37,9 +37,7 @@ impl Component for Blog {
         let mut menu: Vec<Section> = Vec::new();
         
         let mut section0: Vec<Link> = Vec::new();
-        // let mut section1: Vec<Link> = Vec::new();
-        // let mut section2: Vec<Link> = Vec::new();
-        // let mut section3: Vec<Link> = Vec::new();
+        let mut section1: Vec<Link> = Vec::new();
 
         // blog
 
@@ -54,59 +52,26 @@ impl Component for Blog {
             links: section0,
         });
 
-        // ecology
+        // updates
 
-        // section1.push(Link  {
-        //     name: "untitled".to_string(),
-        //     root: "blog".to_string(),
-        //     slug: "untitled".to_string(),
-        // });
+        section1.push(Link  {
+            name: "Beginning Again".to_string(),
+            root: "blog".to_string(),
+            slug: "beginning-again".to_string(),
+        });
 
-        // menu.push(Section {
-        //     title: "ecology".to_string(),
-        //     links: section1,
-        // });
-
-        // technology
-
-        // section2.push(Link  {
-        //     name: "untitled".to_string(),
-        //     root: "blog".to_string(),
-        //     slug: "untitled".to_string(),
-        // });
-
-        // menu.push(Section {
-        //     title: "technology".to_string(),
-        //     links: section2,
-        // });
-
-        // journey
-
-        // section3.push(Link  {
-        //     name: "untitled".to_string(),
-        //     root: "blog".to_string(),
-        //     slug: "untitled".to_string(),
-        // });
-
-        // menu.push(Section {
-        //     title: "journey".to_string(),
-        //     links: section3,
-        // });
+        menu.push(Section {
+            title: "updates".to_string(),
+            links: section1,
+        });
 
         // index
-        let path = include_str!("../../../docs/blog/index.md");
+        let mut path = include_str!("../../../content/blog/index.md");
 
-        // // index
-        // let mut path = include_str!("../../../docs/blog/index.md");
-
-        // // blog
-        // if self.props.slug == "a-degenerate-regenerate" {
-        //     path = include_str!("../../../docs/blog/a-degenerate-regenerate.md")
-        // } else if self.props.slug == "entering-the-cosmos" {
-        //     path = include_str!("../../../docs/blog/entering-the-cosmos.md")
-        // } else if self.props.slug == "why-regeneration-now" {
-        //     path = include_str!("../../../docs/blog/why-regeneration-now.md")
-        // }
+        // posts
+        if self.props.slug == "beginning-again" {
+            path = include_str!("../../../content/blog/000000_beginning_again.md")
+        }
 
         html! {
             <div class="container">

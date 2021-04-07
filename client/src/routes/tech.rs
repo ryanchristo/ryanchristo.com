@@ -23,8 +23,8 @@ impl Component for Tech {
     fn view(&self) -> Html {
 
         // markdown
-        let intro = include_str!("../../../docs/tech/tech-intro.md");
-        let projects = include_str!("../../../docs/tech/tech-projects.md");
+        let intro = include_str!("../../../content/tech/tech-intro.md");
+        let projects = include_str!("../../../content/tech/tech-projects.md");
 
         html! {
             <div class="container">

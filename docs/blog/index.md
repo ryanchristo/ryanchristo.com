@@ -1,3 +1,0 @@
-# blog
-
-Work in progess...

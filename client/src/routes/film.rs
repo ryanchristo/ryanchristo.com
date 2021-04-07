@@ -23,8 +23,8 @@ impl Component for Film {
     fn view(&self) -> Html {
 
         // markdown
-        let intro = include_str!("../../../docs/film/film-intro.md");
-        let projects = include_str!("../../../docs/film/film-projects.md");
+        let intro = include_str!("../../../content/film/film-intro.md");
+        let projects = include_str!("../../../content/film/film-projects.md");
 
         html! {
             <div class="container">

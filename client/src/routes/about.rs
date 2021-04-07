@@ -23,8 +23,8 @@ impl Component for About {
     fn view(&self) -> Html {
 
         // markdown
-        let intro = include_str!("../../../docs/about/about-intro.md");
-        let timeline = include_str!("../../../docs/about/about-timeline.md");
+        let intro = include_str!("../../../content/about/about-intro.md");
+        let timeline = include_str!("../../../content/about/about-timeline.md");
 
         html! {
             <div class="container">
