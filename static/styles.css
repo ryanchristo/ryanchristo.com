@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5 {
 }
 
 p, li {
-  font-weight: 300;
   line-height: 1.75;
 }
 
@@ -54,16 +53,16 @@ button {
 /* theme */
 
 .theme {
-  color: #111;
+  color: #EEE;
 }
 
 .theme a,
 .theme a:active {
-  color: #666;
+  color: #EEE;
 }
 
 .theme a:hover {
-  color: #CCC;
+  color: #0CA;
 }
 
 .theme h1,
@@ -71,19 +70,17 @@ button {
 .theme h3,
 .theme h4,
 .theme h5 {
-  color: #666;
+  color: #0CA;
 }
 
 .theme .header,
 .theme .footer {
-  background: #FFF;
-  box-shadow: 0 0 2px #CCC;
+  background: #111;
 }
 
 .theme .sidebar,
 .theme .sidebar-mobile {
-  background: #FFF;
-  box-shadow: 0 0 2px #CCC;
+  background: #111;
 }
 
 .theme .sidebar h2,
@@ -92,24 +89,23 @@ button {
 }
 
 .theme .banner {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .theme .banner i {
-  color: #666;
+  color: #0CA;
+}
+
+.theme .banner h1 {
+  color: #FFF;
 }
 
 .theme .content {
-  background: #FFF;
-}
-
-.theme .content-item h2 {
-  color: #666;
+  background: #111;
 }
 
 .theme .content-item img {
   filter: grayscale(50%);
-  box-shadow: 0 0 2px #CCC;
 }
 
 /* header, footer */

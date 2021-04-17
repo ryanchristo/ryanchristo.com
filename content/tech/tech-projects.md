@@ -1,10 +1,10 @@
 ## Chora | 2020 - Present
 
-![chora2020](/img/tech_chora2020.jpg)
+![chora2020](/img/tech_chora2020_dark.jpg)
 
 ### Protocol Researcher, Software Developer
 
-Chora is a research project exploring the role of technology in regeneration, cooperative governance models, and the decentralized web. The current mission of the project is to explore "outside the city proper" ([see χώρα](https://en.wikipedia.org/wiki/Kh%C3%B4ra)).
+Chora is a research project exploring the role of technology in regeneration, cooperative governance models, and the decentralized web. The current mission of the project is to explore "outside the city proper".
 
 JavaScript, Go, Rust
 
@@ -30,7 +30,7 @@ Go, Polkadot, Solidity, Ethereum
 
 Colony is a platform for open organizations built on Ethereum. I helped build and maintain developer tools, wrote documentation, explored integrations, and managed developer relations.
 
-JavaScript, React, Redux, Webpack, Gatsby, IPFS, Solidity, Ethereum
+JavaScript, React, Redux, Webpack, IPFS, Solidity, Ethereum
 
 [website](https://colony.io) | [source](https://github.com/joincolony)
 
@@ -90,7 +90,7 @@ JavaScript, React, Redux, Webpack, Node, Express, MongoDB
 
 ### Full Stack Developer
 
-In order to advance my skills in JavaScript, I worked my way through the freeCodeCamp coursework and projects. The coursework and projects focus on full stack development with React, Node, Express, and MongoDB.
+In order to advance my skills in JavaScript, I worked my way through the freeCodeCamp coursework and projects. The freeCodeCamp curriculum focuses on full stack development with React, Node, Express, and MongoDB.
 
 JavaScript, React, Redux, Webpack, Node, Express, MongoDB
 
@@ -100,7 +100,7 @@ JavaScript, React, Redux, Webpack, Node, Express, MongoDB
 
 ### Web Developer
 
-Joglo Northwest is a small business that buys and sells Indonesian art, furniture, and stone. I built a simple user-facing website alongside a custom content management with integrated email services.
+Joglo Northwest is a small business that buys and sells Indonesian art, furniture, and stone. I built a simple user-facing website and a custom-built content management with integrated email services.
 
 HTML, CSS, JavaScript, PHP, SQL
 
