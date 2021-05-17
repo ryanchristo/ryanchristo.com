@@ -1,11 +1,11 @@
 [package]
-authors = ["ryan christoffersen <ryan@ryanchrypto.com>"]
+authors = ["ryan christoffersen <ryan@ryanchristo.com>"]
 description = "decentralized protocol research and development"
 edition = "2018"
 license = "MIT"
-name = "ryanchrypto-client"
+name = "ryanchristo-client"
 readme = "./README.md"
-repository = "https://github.com/ryanchrypto/ryanchrypto.git"
+repository = "https://github.com/ryanchristo/ryanchristo.git"
 version = "0.0.0"
 
 [lib]

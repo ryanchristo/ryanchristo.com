@@ -33,7 +33,7 @@ impl Component for Footer {
                     </li>
                     <li>
                         <a
-                            href="https://github.com/ryanchrypto"
+                            href="https://github.com/ryanchristo"
                             rel="noopener noreferrer"
                             target="_blank"
                         >

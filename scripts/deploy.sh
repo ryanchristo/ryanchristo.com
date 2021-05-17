@@ -15,7 +15,7 @@ git add -A
 git commit -m 'publish'
 
 # push to gh-pages branch
-git push https://github.com/ryanchrypto/ryanchrypto master:gh-pages -f
+git push https://github.com/ryanchristo/ryanchristo master:gh-pages -f
 
 # clean up
 rm -rf .git
